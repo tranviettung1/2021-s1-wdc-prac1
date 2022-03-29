@@ -40,6 +40,10 @@ h1,h2,h3 {
 hr {
     clear: both;
 }
+
+.children-msg {
+    margin-left: 10px;
+}
         </style>
 
         <meta charset="UTF-8">
@@ -55,20 +59,20 @@ hr {
             <div id="mcount" onmouseover="incMcount();"></div>
             <div id="posts"></div>
             <hr />
-            <textarea rows="4" cols="60">Type your text here...</textarea>
+            <textarea id="msg-input" rows="4" cols="60">Type your text here...</textarea>
             <br />
             <div class="controls left">
                 <input type="number" name="quantity" value="1" /><br />
                 <input type="radio" name="color" value="blue" /> Blue<br />
                 <input type="radio" name="color" value="red" /> Red<br />
-                <button>Post</button>
+                <button onclick="createMsg()">Post</button>
             </div>
             <div class="controls left">
                 <input type="range" name="visible" min="1" max="10" value="10"/><br />
                 <input type="checkbox" name="style" value="bold" /> Bold<br />
                 <input type="checkbox" name="style" value="italic" /> Italic<br />
-                <select>
-                    <option disabled selected value="-1">Choose a post to reply to</option>
+                <select id="list-msg">
+                    <option selected value='-1'>Choose a post to reply to</option>
                 </select>
             </div>
             <hr />
