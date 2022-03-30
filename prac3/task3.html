@@ -10,7 +10,7 @@
 
     <body>
         <div id="main" class="container">
-            <button class="right">MENU</button>
+            <button class="right" onclick="onMenuClick()">MENU</button>
             <h1>Part 3 - Javascript Playground</h1>
             <div id="mcount" onmouseover="incMcount()"></div>
             <div id="posts"></div>
@@ -33,8 +33,8 @@
             </div>
             <hr />
         </div>
-        <div id="menu" class="container" style="display:none;">
-            <button class="right">BACK</button>
+        <div id="menu" class="container hidden">
+            <button class="right" onclick="onMenuClick()">BACK</button>
             <p>&nbsp;</p>
             <span>Background Color:</span><input type="text">
         </div>
