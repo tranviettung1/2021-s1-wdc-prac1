@@ -49,6 +49,6 @@ hr {
     font-weight: bold;
 }
 
-.hidden {
-    display: none;
+.children-msg {
+    margin-left: 10px;
 }
