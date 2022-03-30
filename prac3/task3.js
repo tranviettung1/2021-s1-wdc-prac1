@@ -19,10 +19,8 @@ function createMsg() {
     const id = 'msg-' + msgId;
     msgTemplate.id = id;
     msgTemplate.innerHTML = `
-              <div class='message'>
                 <div class='post-time'>${new Date()}</div>
                 <p class='post-content'>${msg}</p>
-              </div>
       `;
     msgTemplate.className = parentMessage !== '-1' ? 'children-msg' : 'wrapper-message'
   
