@@ -12,28 +12,22 @@ function incMcount() {
 
 function createMsg() {
     const msg = document.getElementById("msg-input").value;
-    // const parentMessage = document.getElementById("list-msg").value;
+    const parentMessage = document.getElementById("list-msg").value;
     const post = document.getElementById("posts");
   
-    const postTime = document.createElement("div");
-    postTime.innerText = new Date();
-    postTime.className = 'post-time';
+    const blogPost = document.createElement("div");
 
-    const postContent = document.createElement('p');
-    postContent.innerText = msg;
-    postContent.className = 'post-content';
-    // const id = 'msg-' + msgId;
-    // msgTemplate.id = id;
-    // msgTemplate.innerHTML = `
-    //             <div class='post-time'>${new Date()}</div>
-    //             <p class='post-content'>${msg}</p>
-    //   `;
-    // msgTemplate.className = parentMessage !== '-1' ? 'children-msg' : 'wrapper-message'
+    const id = 'msg-' + msgId;
+    blogPost.id = id;
+    blogPost.innerHTML = `
+                <div class='post-time'>${new Date()}</div>
+                <p class='post-content'>${msg}</p>
+      `;
+    blogPost.className = 'blog-post'
   
-    // msgId++;
+    msgId++;
   
-    post.appendChild(postTime);
-    post.appendChild(postContent);
+    post.appendChild(blogPost);
 }
 
 function onMenuClick() {
