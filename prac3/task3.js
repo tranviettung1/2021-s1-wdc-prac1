@@ -60,22 +60,18 @@ function onMenuClick() {
   const main = document.getElementById("main");
   const menu = document.getElementById("menu");
 
-  if (main.classList.contains("hidden")) {
-    main.classList.remove("hidden");
-    return menu.classList.add("hidden");
-  }
-
-  main.classList.add("hidden");
-  return menu.classList.remove("hidden");
+  main.style.display = 'none';
+  menu.style.display = 'block';
 }
 
-function debounce(func, timeout = 300){
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => { func.apply(this, args); }, timeout);
-  };
+function onBackClick() {
+  const main = document.getElementById("main");
+  const menu = document.getElementById("menu");
+
+  main.style.display = 'block';
+  menu.style.display = 'none';
 }
+
 function changeColor(){
   const backgroundColor = document.getElementById('background-color-input').value;
 
