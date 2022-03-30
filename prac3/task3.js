@@ -12,22 +12,18 @@ function incMcount() {
 
 function createMsg() {
     const msg = document.getElementById("msg-input").value;
-    const parentMessage = document.getElementById("list-msg").value;
     const post = document.getElementById("posts");
   
-    const blogPost = document.createElement("div");
+    const postTime = document.createElement("div");
+    postTime.innerText = new Date();
+    postTime.className = 'post-time';
 
-    const id = 'msg-' + msgId;
-    blogPost.id = id;
-    blogPost.innerHTML = `
-                <div class='post-time'>${new Date()}</div>
-                <p class='post-content'>${msg}</p>
-      `;
-    blogPost.className = 'blog-post'
+    const postContent = document.createElement("p");
+    postContent.innerText = msg;
+    postContent.className = 'post-content';
   
-    msgId++;
-  
-    post.appendChild(blogPost);
+    post.appendChild(postTime);
+    post.appendChild(postContent);
 }
 
 function onMenuClick() {
