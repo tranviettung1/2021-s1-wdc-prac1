@@ -19,11 +19,6 @@ body {
     width: 240px;
 }
 
-.post-time {
-    color: grey;
-    font-weight: bold;
-}
-
 h1,h2,h3 {
     font-family: serif;
 }
@@ -47,4 +42,13 @@ h1,h2,h3 {
 
 hr {
     clear: both;
+}
+
+.post-time {
+    color: grey;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }
