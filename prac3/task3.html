@@ -18,7 +18,7 @@
             <textarea id="msg-input" rows="4" cols="60">Type your text here...</textarea>
             <br />
             <div class="controls left">
-                <input type="number" name="quantity" value="1" /><br />
+                <input id="quantity" type="number" name="quantity" value="1" /><br />
                 <input type="radio" name="color" value="blue" /> Blue<br />
                 <input type="radio" name="color" value="red" /> Red<br />
                 <button onclick="createMsg()">Post</button>
@@ -36,7 +36,7 @@
         <div id="menu" class="container hidden">
             <button class="right" onclick="onMenuClick()">BACK</button>
             <p>&nbsp;</p>
-            <span>Background Color:</span><input type="text">
+            <span>Background Color:</span><input id="background-color-input" onkeyup="processChange()" type="text">
         </div>
     </body>
 </html>
