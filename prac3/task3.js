@@ -81,4 +81,3 @@ function changeColor(){
 
   document.body.style.backgroundColor = backgroundColor;
 }
-const processChange = debounce(() => changeColor(), 300);
